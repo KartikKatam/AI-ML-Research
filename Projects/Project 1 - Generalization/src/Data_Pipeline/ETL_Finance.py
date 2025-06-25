@@ -10,16 +10,17 @@ import pandas as pd
 import nasdaqdatalink as ndl
 from dotenv import load_dotenv
 from tqdm import tqdm
+from nasdaqdatalink import ApiConfig
 
 load_dotenv()
-ndl.ApiConfig.api_key = os.getenv("NASDAQ_API_KEY")
+ApiConfig.api_key = os.getenv("NASDAQ_API_KEY")  # type: ignore[attr-defined]
 
 def fetch_ticker(ticker: str, start: str, end: str) -> pd.DataFrame:
     df = ndl.get(f"SHARADAR/DAILY", ticker=ticker,
                  start_date=start, end_date=end, paginate=True)
     df.index = pd.to_datetime(df.index)
     # keep only OHLCV
-    return df[['open','high','low','close','volume']]
+    return df.loc[:, ['open','high','low','close','volume']]
 
 def main(args):
     tickers = pd.read_csv(args.tickers)['ticker'].tolist()
