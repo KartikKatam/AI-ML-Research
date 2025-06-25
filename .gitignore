@@ -1,0 +1,22 @@
+# --- secrets -------------------------------------------------
+.env                           # API keys, tokens
+
+# --- data artifacts -----------------------------------------
+data/raw/                      # Parquet, CSV, etc.  (can be recreated)
+data/interim/
+data/processed/
+
+# --- Python virtual envs ------------------------------------
+.venv/
+env/
+genbench/                      # if you created a venv here
+
+# --- OS & editor noise --------------------------------------
+*.DS_Store
+.vscode/
+
+# --- notebooks checkpoints ----------------------------------
+.ipynb_checkpoints/
+
+# --- pytest cache -------------------------------------------
+.pytest_cache/
