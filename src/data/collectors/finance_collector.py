@@ -89,10 +89,6 @@ def process_ticker_list(ticker_csv_path, start_date="2000-01-01", end_date="2024
     except Exception as e:
         print(f"Error processing ticker list: {str(e)}")
 
-# Example usage:
 if __name__ == "__main__":
-    # Test single ticker
-    save_ticker_data("AAPL")
-    
-    # Example of processing multiple tickers from CSV
-    # process_ticker_list("tickers.csv")
+
+    process_ticker_list("tickers.csv")
