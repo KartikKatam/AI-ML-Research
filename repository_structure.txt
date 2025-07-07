@@ -1,0 +1,70 @@
+sequence-forecasting-robustness/
+├── README.md                          # Project overview & reproduction guide
+├── requirements.txt                   # Dependencies with exact versions
+├── environment.yml                    # Conda environment specification
+├── setup.py                          # Package installation
+├── .gitignore                        # Git ignore patterns
+├── .github/
+│   └── workflows/
+│       └── tests.yml                 # CI/CD pipeline
+├── research_log/
+│   ├── papers_reviewed/              # Paper summaries & insights
+│   ├── lectures_watched/             # Lecture notes & key concepts
+│   └── experiments/                  # Experimental results & analysis
+├── data/
+│   ├── raw/                         # Original downloaded data
+│   ├── processed/                   # Cleaned & engineered features
+│   ├── synthetic/                   # Generated synthetic data
+│   └── splits/                      # Train/val/test splits
+├── src/
+│   ├── __init__.py
+│   ├── data/
+│   │   ├── __init__.py
+│   │   ├── collectors/              # Data collection modules
+│   │   │   ├── finance_collector.py
+│   │   │   └── energy_collector.py
+│   │   ├── processors/              # Feature engineering
+│   │   │   ├── finance_features.py
+│   │   │   └── energy_features.py
+│   │   ├── splitters/               # Cross-validation splitting
+│   │   │   └── ood_splitters.py
+│   │   └── pipeline.py              # Main data pipeline
+│   ├── models/
+│   │   ├── __init__.py
+│   │   ├── architectures/           # Model implementations
+│   │   ├── training/                # Training loops & utilities
+│   │   └── evaluation/              # Evaluation metrics
+│   ├── synthetic/
+│   │   ├── __init__.py
+│   │   ├── timegan/                 # TimeGAN implementation
+│   │   └── evaluation/              # Synthetic data evaluation
+│   ├── interpretability/
+│   │   ├── __init__.py
+│   │   ├── attribution/             # Attribution methods
+│   │   └── drift_detection/         # Attribution drift computation
+│   └── utils/
+│       ├── __init__.py
+│       ├── logging.py               # Research logging utilities
+│       ├── config.py                # Configuration management
+│       └── visualization.py         # Plotting utilities
+├── configs/
+│   ├── data_config.yaml            # Data pipeline configuration
+│   ├── model_config.yaml           # Model hyperparameters
+│   └── experiment_config.yaml      # Experimental setup
+├── scripts/
+│   ├── download_data.py            # Data collection script
+│   ├── run_experiment.py           # Main experiment runner
+│   └── generate_report.py          # Results compilation
+├── tests/
+│   ├── __init__.py
+│   ├── test_data/                  # Data pipeline tests
+│   ├── test_models/                # Model tests
+│   └── test_synthetic/             # Synthetic data tests
+├── notebooks/
+│   ├── exploratory/                # EDA notebooks
+│   ├── analysis/                   # Results analysis
+│   └── visualization/              # Figure generation
+└── docs/
+    ├── methodology.md              # Detailed methodology
+    ├── results.md                  # Results summary
+    └── api_reference.md            # Code documentation

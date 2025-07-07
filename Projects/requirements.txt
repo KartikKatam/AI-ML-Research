@@ -1,5 +1,0 @@
-nasdaq-data-link>=1.0.0
-pandas>=2.2
-pyarrow>=15
-tqdm>=4.66
-python-dotenv>=1.0
